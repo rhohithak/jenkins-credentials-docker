@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-        sh 'docker build -t apasoft/jenkins-web:latest .'
+        sh 'docker build -t rhohith2001/gonemad:latest .'
       }
     }
     stage('Docker Push') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
+        withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: '3D*T*arHVpjy/4X', usernameVariable: 'rhohith07@gmail.com')]) {
           sh "docker login -u ${env.dockerUser} -p ${env.dockerPassword}"
-          sh 'docker push apasoft/jenkins-web:latest'
+          sh 'docker push rhohith2001/gonemad:latest'
         }
       }
     }
